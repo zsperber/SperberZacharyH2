@@ -1,5 +1,37 @@
+import java.lang.Math.*;
+
 public class SquareRoot
 {
-  public static void main(String[] args)
-  {
     
+
+   public double guess =0;
+   
+    public static double daddyAF(double x, double error)
+    {
+    int flag=0;
+    if(flag==0)
+    {
+      double guess = x/2;
+      flag++;
+    }
+    
+double guess=guess;
+      if ( Math.abs(x-(guess*guess)) <= error)
+      {
+        return guess;
+      }
+      else
+      {
+        return 0.5*daddyAF(guess+(x/guess),error);
+                    }            
+    }
+   
+   
+      public static void main (String[] args)
+   {
+System.out.println(daddyAF(72,00));
+
+   }
+   
+   
+}
